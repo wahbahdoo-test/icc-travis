@@ -2,94 +2,91 @@ language: c
 sudo: false
 env:
   global:
-    # Intel Parallel Studio
-    - secure: "pRthq4b59pqfe333JklO6VAuRR2OTfecg0X2cAznmzsmNj8AF/hL1HQCoUScPwSwLBfVCfaEK/sT1jXCG3nz1/TQtwtVuarQuylSzxnqJZJEubDOhpT8nNnvAqVvgGzsq7z4FgBUmk+Nv6nrFkf8FGqfgRY3/djeogmNWs8FYRPXeqnBUTix5mlTY1rim940RdTzipo8IlXhpux9Dwjr6U+jKaKDEqq3t5AMqmBAcF5KulNJhCbSQhIu3hNs7hhMGPyxbbX9FfYtBQ45IU87FqSOfUfp2jOmw+h1N6XMIlqXTtshR3IditvXkhtOY9Aw6QE39oX1ivCFzqnk2iFmNArWnOHIltTT72zKuwURX2WQU6y7FfsF1NrtGijHJsfqieRDgBWnfoNFm9nCJQSv6g/tFXsT95dmvipzvzqSGpkArTc6kWBkFnfKy9FfbLnHm9V2L+PFI5HFXNZaEobmM4FKHSGxkQNwBoXufnmCWV2ZIf3uLfwERqL92Sas2lkoOV/mEznI30AeowTnCG1+cUvFRZOrv+5UFUuRSQi83DBFzsXQJjoYEnezA9kVWSVAuamBKRiOZ5YvLngiRJPmIdUC3m4N/6zOK68ouCJy06S/LzrFkWNMS74zwYI1ICiJt7Yt4Khzl35KoP+C1NOLuylj1OyIipActGoOH8z71a4="
+    # product serial number for Intel Studio Studio
+    - secure: "B3GdVE+cq4bKFq0Tgh3+efKKcsC6v+4hQNEbMhunTgAvHJVje3RSJkDk4WjSJlwHu4b8uRYnYUsce9kax91waK/+PvV5KApSmoqFrybsfYFFfTwFHSUYaFpE2cdDWPIFZNKnpThMFBt9Q5PGI84WSRd0agw3d0nuRhuHQEslUJbxwTFXCE5J8y+n/3+kXKrigf2f4CL29+thLpbGmXNDXw0Jx8nJExKe4HTg89y1Ij97CXMPqN8cRWHL+HyQW+bDN2MEgzDIm2sn2GXTsP24lrNuP0c7izW/d5UqVM7Ucimy0EBepoGm/PrmwBp1emlLrju2UNrUhxN1XePnkgAy/AuLJkT++hFrnaWwq4oxPFlte2ova/z/7P9lKtkeobkrhIYMaarmriPuxqmfLXIANfghoMOpQwpPJ7GkvkHckfX7o3d7JztlgFQQt+OKBqlLjIOyvzKYHPVUgx9BEL5h58W3SfhOUw7w8LekrwIITuMlN5zQf17VD3C9q9KCwLNwZ5p0ZeoZSsSzcJMjsNqUa/SadavKVTTjuEkH7W/U05YSnAz21cv1ENBkqckiECq2OpDVSTk+wI+JJOr9jusc5XySjTYpXLT+r/Hr60o8GG6b9UTCrbgc0TJ9qaLzJHThBNI4biVlV/n8aRZEwLNunGe/3aVsYsJlyxMdazEY8wI="
 matrix:
   include:
     ##
     # Test basic installation with different Travis environments
     ##
-    # Ubuntu 12.04 container build
-    - os: linux
-      sudo: false
-      env: COMPONENTS=icc
-    # Ubuntu 12.04 VM
-    - os: linux
-      sudo: required
-      env: COMPONENTS=icc
+    # # Ubuntu 12.04 container build
+    # - os: linux
+    #   env: COMPONENTS=icc
+    # # Ubuntu 12.04 VM
+    # - os: linux
+    #   env: COMPONENTS=icc
     # Ubuntu 14.04 VM
     - os: linux
-      sudo: required
       dist: trusty
       env: COMPONENTS=icc
 
     ##
     # Test individual components
     ##
-    # IPP
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,ipp"
-    # TBB
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,tbb"
-    # DAAL
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,daal"
-    # MPI
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,mpi"
-    # Fortran
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,ifort"
-    # Fortran + MKL
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,ifort,mkl"
-    # Fortran + MPI
-    - os: linux
-      sudo: false
-      env: COMPONENTS="icc,ifort,mpi"
+    # # IPP
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,ipp"
+    # # TBB
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,tbb"
+    # # DAAL
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,daal"
+    # # MPI
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,mpi"
+    # # Fortran
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,ifort"
+    # # Fortran + MKL
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,ifort,mkl"
+    # # Fortran + MPI
+    # - os: linux
+    #   sudo: false
+    #   env: COMPONENTS="icc,ifort,mpi"
 
     # # Everything (for debugging without taxing Travis too heavily)
     # - os: linux
     #   sudo: false
     #   env: COMPONENTS="icc,ifort,mpi,daal,ipp,tbb,mkl"
 before_install:
-  - ./install-icc.sh --components "${COMPONENTS}"
+  - ./install-icc-iss.sh --components "${COMPONENTS}"
   - source ~/.bashrc
 script:
   # C compiler
   - '[[ "${COMPONENTS}" != *"icc"* ]] || (icc -std=c99 test/test.c -o test/test-c99 && ./test/test-c99)'
-  # C++ compiler
-  - '[[ "${COMPONENTS}" != *"icc"* ]] || (icpc -std=c++11 test/test.cxx -o test/test-c++11 && ./test/test-c++11)'
-  # Cilk support
-  - '[[ "${COMPONENTS}" != *"icc"* ]] || (icc -std=c99 test/test-cilk.c -o test/test-cilk && ./test/test-cilk)'
-  # Fortran 90 compiler
-  - '[[ "${COMPONENTS}" != *"ifort"* ]] || (ifort -std08 -fpp test/test.f90 -o test/test-f90 && ./test/test-f90)'
-  # MPI-3
-  - '[[ "${COMPONENTS}" != *"mpi"* ]] || (mpiicc -std=c99 test/test-mpi.c -o test/test-mpi && ./test/test-mpi)'
-  # IPP
-  - '[[ "${COMPONENTS}" != *"ipp"* ]] || (icc -std=c99 -ipp test/test-ipp.c -o test/test-ipp && ./test/test-ipp)'
-  # DAAL
-  - '[[ "${COMPONENTS}" != *"daal"* ]] || (icpc -std=c++11 -daal test/test-daal.cxx -o test/test-daal && ./test/test-daal)'
-  # TBB
-  - '[[ "${COMPONENTS}" != *"tbb"* ]] || (icpc -std=c++11 -tbb test/test-tbb.cxx -o test/test-tbb && ./test/test-tbb)'
-  # MKL CBLAS
-  - '[[ "${COMPONENTS}" != *"mkl"* ]] || (icc -std=c99 -mkl test/test-mkl.c -o test/test-mkl && ./test/test-mkl)'
-  # Fortran MKL
-  - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* ]] || (ifort -std08 -mkl test/test-mkl.f90 -o test/test-mkl-fortran && ./test/test-mkl-fortran)'
-  # Fortran MPI-2
-  - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* || "${COMPONENTS}" != *"mpi"* ]] || (mpiifort -std08 test/test-mpi.f90 -o test/test-mpi-fortran && ./test/test-mpi-fortran)'
-  # Fortran 2008 MPI-3
-  - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* || "${COMPONENTS}" != *"mpi"* ]] || (mpiifort -std08 test/test-mpi-f08.f90 -o test/test-mpi-f08 && ./test/test-mpi-f08)'
+#  # C++ compiler
+#   - '[[ "${COMPONENTS}" != *"icc"* ]] || (icpc -std=c++11 test/test.cxx -o test/test-c++11 && ./test/test-c++11)'
+#   # Cilk support
+#   - '[[ "${COMPONENTS}" != *"icc"* ]] || (icc -std=c99 test/test-cilk.c -o test/test-cilk && ./test/test-cilk)'
+#   # Fortran 90 compiler
+#   - '[[ "${COMPONENTS}" != *"ifort"* ]] || (ifort -std08 -fpp test/test.f90 -o test/test-f90 && ./test/test-f90)'
+#   # MPI-3
+#   - '[[ "${COMPONENTS}" != *"mpi"* ]] || (mpiicc -std=c99 test/test-mpi.c -o test/test-mpi && ./test/test-mpi)'
+#   # IPP
+#   - '[[ "${COMPONENTS}" != *"ipp"* ]] || (icc -std=c99 -ipp test/test-ipp.c -o test/test-ipp && ./test/test-ipp)'
+#   # DAAL
+#   - '[[ "${COMPONENTS}" != *"daal"* ]] || (icpc -std=c++11 -daal test/test-daal.cxx -o test/test-daal && ./test/test-daal)'
+#   # TBB
+#   - '[[ "${COMPONENTS}" != *"tbb"* ]] || (icpc -std=c++11 -tbb test/test-tbb.cxx -o test/test-tbb && ./test/test-tbb)'
+#   # MKL CBLAS
+#   - '[[ "${COMPONENTS}" != *"mkl"* ]] || (icc -std=c99 -mkl test/test-mkl.c -o test/test-mkl && ./test/test-mkl)'
+#   # Fortran MKL
+#   - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* ]] || (ifort -std08 -mkl test/test-mkl.f90 -o test/test-mkl-fortran && ./test/test-mkl-fortran)'
+#   # Fortran MPI-2
+#   - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* || "${COMPONENTS}" != *"mpi"* ]] || (mpiifort -std08 test/test-mpi.f90 -o test/test-mpi-fortran && ./test/test-mpi-fortran)'
+#   # Fortran 2008 MPI-3
+#   - '[[ "${COMPONENTS}" != *"ifort"* || "${COMPONENTS}" != *"mkl"* || "${COMPONENTS}" != *"mpi"* ]] || (mpiifort -std08 test/test-mpi-f08.f90 -o test/test-mpi-f08 && ./test/test-mpi-f08)'
 
-after_script:
-  - '[[ ! -z "${INTEL_INSTALL_PATH}" ]] && uninstall_intel_software'
+# after_script:
+#   - '[[ ! -z "${INTEL_INSTALL_PATH}" ]] && uninstall_intel_software'
 
 notifications:
   email:
