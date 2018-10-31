@@ -3,7 +3,7 @@ sudo: false
 env:
   global:
     # product serial number for Intel Studio Studio
-    - secure: "B3GdVE+cq4bKFq0Tgh3+efKKcsC6v+4hQNEbMhunTgAvHJVje3RSJkDk4WjSJlwHu4b8uRYnYUsce9kax91waK/+PvV5KApSmoqFrybsfYFFfTwFHSUYaFpE2cdDWPIFZNKnpThMFBt9Q5PGI84WSRd0agw3d0nuRhuHQEslUJbxwTFXCE5J8y+n/3+kXKrigf2f4CL29+thLpbGmXNDXw0Jx8nJExKe4HTg89y1Ij97CXMPqN8cRWHL+HyQW+bDN2MEgzDIm2sn2GXTsP24lrNuP0c7izW/d5UqVM7Ucimy0EBepoGm/PrmwBp1emlLrju2UNrUhxN1XePnkgAy/AuLJkT++hFrnaWwq4oxPFlte2ova/z/7P9lKtkeobkrhIYMaarmriPuxqmfLXIANfghoMOpQwpPJ7GkvkHckfX7o3d7JztlgFQQt+OKBqlLjIOyvzKYHPVUgx9BEL5h58W3SfhOUw7w8LekrwIITuMlN5zQf17VD3C9q9KCwLNwZ5p0ZeoZSsSzcJMjsNqUa/SadavKVTTjuEkH7W/U05YSnAz21cv1ENBkqckiECq2OpDVSTk+wI+JJOr9jusc5XySjTYpXLT+r/Hr60o8GG6b9UTCrbgc0TJ9qaLzJHThBNI4biVlV/n8aRZEwLNunGe/3aVsYsJlyxMdazEY8wI="
+    # use travis encrypt "INTEL_SERIAL_NUMBER=XXX-XXXX" --add instead
 matrix:
   include:
     ##
