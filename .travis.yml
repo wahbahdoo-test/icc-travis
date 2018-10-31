@@ -1,9 +1,5 @@
 language: c
-sudo: false
-env:
-  global:
-    # product serial number for Intel Studio Studio
-    # use travis encrypt "INTEL_SERIAL_NUMBER=XXX-XXXX" --add instead
+
 matrix:
   include:
     ##
